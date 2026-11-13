@@ -15,7 +15,11 @@ wine       \
 qemu-full virt-manager virt-viewer libvirt bridge-utils dnsmasq ebtables iptables-nft \
 radare2 \ 
 rsync   \
-rclone; 
+rclone 
+kernel-modules-hook;
+
+### ENABLE KERNEL MODULES HOOK CLEANUP
+sudo systemctl enable --now linux-modules-cleanup; 
 
 echo 'Changing shell to zsh...';
 chsh -s "$(which zsh)";
